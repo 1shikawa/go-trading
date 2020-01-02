@@ -24,7 +24,6 @@ type APIClient struct {
 	httpClient *http.Client
 }
 
-// APIClientのコンストラクタ
 func New(key, secret string) *APIClient {
 	apiClient := &APIClient{key, secret, &http.Client{}}
 	return apiClient
