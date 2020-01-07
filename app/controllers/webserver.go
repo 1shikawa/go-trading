@@ -63,7 +63,7 @@ func apiCandleHandler(w http.ResponseWriter, r *http.Request) {
 
 	duration := r.URL.Query().Get("duration")
 	if duration == "" {
-		duration = "1m"
+		duration = "1h"
 	}
 	durationTime := config.Config.Durations[duration]
 

@@ -7,13 +7,14 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/gorilla/websocket"
 	"io/ioutil"
 	"log"
 	"net/http"
 	"net/url"
 	"strconv"
 	"time"
+
+	"github.com/gorilla/websocket"
 )
 
 const baseURL = "https://api.bitflyer.com/v1/"
@@ -24,6 +25,7 @@ type APIClient struct {
 	httpClient *http.Client
 }
 
+// APIClientのコンストラクタ
 func New(key, secret string) *APIClient {
 	apiClient := &APIClient{key, secret, &http.Client{}}
 	return apiClient
